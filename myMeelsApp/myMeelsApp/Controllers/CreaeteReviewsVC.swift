@@ -8,10 +8,15 @@
 import UIKit
 
 final class CreaeteReviewsVC: UIViewController {
-    var index = 0
+    private let defaultImage = UIImage(named: "photo.fill")
+    private lazy var imagePicker: ImagePicker = { ImagePicker() }()
     private var mark = 1.0
-    var image: CollectionViewCell?
-
+    private var isImageSelected = false
+    var index = 0
+    
+        
+    
+    @IBOutlet weak var deleteImageBtn: UIButton!
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var text: UITextView!
     @IBOutlet var warningLbl: UILabel!
@@ -20,6 +25,8 @@ final class CreaeteReviewsVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        imageView.image = defaultImage
+        deleteImageBtn.isEnabled = false
         button.isEnabled = false
         hideKeyboardWhenTappedAround()
         dismissKeyboard()
@@ -37,66 +44,28 @@ final class CreaeteReviewsVC: UIViewController {
     }
 
     @IBAction func saveReviews() {
-        DataM.shared.foods[index].ratingArray.append(Reviews(text: text.text, mark: mark))
-        dismiss(animated: true)
-    }
-}
-
-extension CreaeteReviewsVC: UICollectionViewDataSource, UICollectionViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int { 3 }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell1 = UICollectionViewCell()
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? CollectionViewCell else { return cell1 }
-        
-        cell.image = image?.image
-
-        return cell
+        let review = Reviews(text: text.text, mark: mark, image: imageView.image)
+           DataM.shared.foods[index].ratingArray.append(review)
+           dismiss(animated: true)
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cameraIcon = UIImage(named: "camera")
-        let photoIcon = UIImage(named: "photo")
-        
-        let actionSheet = UIAlertController(title: nil,
-                                            message: nil,
-                                            preferredStyle: .actionSheet)
-        let camera = UIAlertAction(title: "Camera", style: .default) { _ in
-            self.chooseImagePicker(source: .camera)
-        }
-        camera.setValue(cameraIcon, forKey: "image")
-        camera.setValue(CATextLayerAlignmentMode.left, forKey: "titleTextAlignment")
-        let photo = UIAlertAction(title: "Photo", style: .default) { _ in
-            self.chooseImagePicker(source: .photoLibrary)
-        }
-        photo.setValue(photoIcon, forKey: "image")
-        photo.setValue(CATextLayerAlignmentMode.left, forKey: "titleTextAlignment")
-        
-        let cancel = UIAlertAction(title: "Cancel", style: .cancel)
-        
-        actionSheet.addAction(camera)
-        actionSheet.addAction(photo)
-        actionSheet.addAction(cancel)
-        
-        present(actionSheet, animated: true)
+    // Добавление и удаление изображения
+    
+    @IBAction func pushSelectImage(_ sender: Any) {
+        imagePicker.showImagePicker(in: self) { image in
+              self.imageView.image = image
+              self.deleteImageBtn.isEnabled = true
+              self.isImageSelected = true
+          }
     }
     
-    func chooseImagePicker(source: UIImagePickerController.SourceType) {
-        if UIImagePickerController.isSourceTypeAvailable(source) {
-            let imagePicker = UIImagePickerController()
-            imagePicker.delegate = self
-            imagePicker.allowsEditing = true
-            imagePicker.sourceType = source
-            present(imagePicker, animated: true)
-        }
+    @IBAction func deleteImage(_ sender: Any) {
+        self.imageView.image = defaultImage
+        self.deleteImageBtn.isEnabled = false
+        self.isImageSelected = false
     }
-
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
-        guard let image = info[.originalImage] as? UIImage else { return }
-        self.image?.image.image = image
-        dismiss(animated: true)
-    }
-
+    
+    // Скрытие клавиатуры при нажатии на пустой обьект на экране
     func hideKeyboardWhenTappedAround() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         tap.cancelsTouchesInView = false

@@ -10,4 +10,5 @@ final class CustomTVC: UITableViewCell {
     @IBOutlet var dateLbl: UILabel!
     @IBOutlet var textLbl: UILabel!
     @IBOutlet var ratingLbl: UILabel!
+    @IBOutlet var customImageView: UIImageView!
 }

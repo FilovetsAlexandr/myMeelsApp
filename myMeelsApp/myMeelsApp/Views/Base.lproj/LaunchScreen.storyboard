@@ -16,17 +16,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Заставка" translatesAutoresizingMaskIntoConstraints="NO" id="6ng-TM-xP6">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="6ng-TM-xP6">
                                 <rect key="frame" x="121.66666666666669" y="363.66666666666669" width="150" height="150.00000000000006"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="b4u-E6-nfL"/>
                                     <constraint firstAttribute="width" constant="150" id="gcX-mY-BO1"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meels App" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iwl-Q6-fRZ">
+                                <rect key="frame" x="25" y="545.66666666666663" width="343" height="41.666666666666629"/>
+                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Iwl-Q6-fRZ" secondAttribute="trailing" constant="25" id="19F-ov-kZf"/>
+                            <constraint firstItem="Iwl-Q6-fRZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="1k0-4d-fEK"/>
+                            <constraint firstItem="Iwl-Q6-fRZ" firstAttribute="top" secondItem="6ng-TM-xP6" secondAttribute="bottom" constant="32" id="5dj-Nc-V5s"/>
                             <constraint firstItem="6ng-TM-xP6" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="NVj-sO-vp3"/>
                             <constraint firstItem="6ng-TM-xP6" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="iGT-1l-Mjd"/>
                         </constraints>
@@ -38,7 +47,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Заставка" width="1024" height="1024"/>
+        <image name="logo" width="1024" height="1024"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
