@@ -9,21 +9,37 @@
 /* Begin PBXBuildFile section */
 		F434FC742AC21DE000EA2C12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F434FC732AC21DE000EA2C12 /* AppDelegate.swift */; };
 		F434FC762AC21DE000EA2C12 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F434FC752AC21DE000EA2C12 /* SceneDelegate.swift */; };
-		F434FC782AC21DE000EA2C12 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F434FC772AC21DE000EA2C12 /* ViewController.swift */; };
+		F434FC782AC21DE000EA2C12 /* MainTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F434FC772AC21DE000EA2C12 /* MainTableVC.swift */; };
 		F434FC7B2AC21DE000EA2C12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F434FC792AC21DE000EA2C12 /* Main.storyboard */; };
 		F434FC7D2AC21DE400EA2C12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F434FC7C2AC21DE400EA2C12 /* Assets.xcassets */; };
 		F434FC802AC21DE400EA2C12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F434FC7E2AC21DE400EA2C12 /* LaunchScreen.storyboard */; };
+		F434FC8A2AC21E7D00EA2C12 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = F434FC892AC21E7D00EA2C12 /* Food.swift */; };
+		F434FC8C2AC2219500EA2C12 /* CustomTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F434FC8B2AC2219500EA2C12 /* CustomTVC.swift */; };
+		F434FC8E2AC228A300EA2C12 /* MainCustomTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F434FC8D2AC228A300EA2C12 /* MainCustomTVC.swift */; };
+		F434FC902AC228D200EA2C12 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F434FC8F2AC228D200EA2C12 /* CollectionViewCell.swift */; };
+		F434FC952AC22A6E00EA2C12 /* DataM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F434FC942AC22A6E00EA2C12 /* DataM.swift */; };
+		F434FC972AC22B2600EA2C12 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F434FC962AC22B2600EA2C12 /* DetailVC.swift */; };
+		F434FC992AC22C3800EA2C12 /* CreaeteReviewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F434FC982AC22C3800EA2C12 /* CreaeteReviewsVC.swift */; };
+		F434FC9B2AC22DE000EA2C12 /* ReviewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F434FC9A2AC22DE000EA2C12 /* ReviewsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F434FC702AC21DE000EA2C12 /* myMeelsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myMeelsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F434FC732AC21DE000EA2C12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F434FC752AC21DE000EA2C12 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F434FC772AC21DE000EA2C12 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F434FC772AC21DE000EA2C12 /* MainTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableVC.swift; sourceTree = "<group>"; };
 		F434FC7A2AC21DE000EA2C12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F434FC7C2AC21DE400EA2C12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F434FC7F2AC21DE400EA2C12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F434FC812AC21DE400EA2C12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F434FC892AC21E7D00EA2C12 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		F434FC8B2AC2219500EA2C12 /* CustomTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTVC.swift; sourceTree = "<group>"; };
+		F434FC8D2AC228A300EA2C12 /* MainCustomTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCustomTVC.swift; sourceTree = "<group>"; };
+		F434FC8F2AC228D200EA2C12 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		F434FC942AC22A6E00EA2C12 /* DataM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataM.swift; sourceTree = "<group>"; };
+		F434FC962AC22B2600EA2C12 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
+		F434FC982AC22C3800EA2C12 /* CreaeteReviewsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreaeteReviewsVC.swift; sourceTree = "<group>"; };
+		F434FC9A2AC22DE000EA2C12 /* ReviewsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +72,71 @@
 		F434FC722AC21DE000EA2C12 /* myMeelsApp */ = {
 			isa = PBXGroup;
 			children = (
-				F434FC732AC21DE000EA2C12 /* AppDelegate.swift */,
-				F434FC752AC21DE000EA2C12 /* SceneDelegate.swift */,
-				F434FC772AC21DE000EA2C12 /* ViewController.swift */,
-				F434FC792AC21DE000EA2C12 /* Main.storyboard */,
-				F434FC7C2AC21DE400EA2C12 /* Assets.xcassets */,
-				F434FC7E2AC21DE400EA2C12 /* LaunchScreen.storyboard */,
+				F434FC872AC21E0E00EA2C12 /* App */,
+				F434FC932AC22A5900EA2C12 /* Manager */,
+				F434FC882AC21E5E00EA2C12 /* Models */,
+				F434FC912AC2291F00EA2C12 /* Controllers */,
+				F434FC9C2AC22E1600EA2C12 /* Views */,
+				F434FC9D2AC22E2100EA2C12 /* Resources */,
 				F434FC812AC21DE400EA2C12 /* Info.plist */,
 			);
 			path = myMeelsApp;
+			sourceTree = "<group>";
+		};
+		F434FC872AC21E0E00EA2C12 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F434FC732AC21DE000EA2C12 /* AppDelegate.swift */,
+				F434FC752AC21DE000EA2C12 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		F434FC882AC21E5E00EA2C12 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F434FC892AC21E7D00EA2C12 /* Food.swift */,
+				F434FC8B2AC2219500EA2C12 /* CustomTVC.swift */,
+				F434FC8D2AC228A300EA2C12 /* MainCustomTVC.swift */,
+				F434FC8F2AC228D200EA2C12 /* CollectionViewCell.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F434FC912AC2291F00EA2C12 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F434FC772AC21DE000EA2C12 /* MainTableVC.swift */,
+				F434FC962AC22B2600EA2C12 /* DetailVC.swift */,
+				F434FC982AC22C3800EA2C12 /* CreaeteReviewsVC.swift */,
+				F434FC9A2AC22DE000EA2C12 /* ReviewsVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F434FC932AC22A5900EA2C12 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				F434FC942AC22A6E00EA2C12 /* DataM.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		F434FC9C2AC22E1600EA2C12 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F434FC792AC21DE000EA2C12 /* Main.storyboard */,
+				F434FC7E2AC21DE400EA2C12 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F434FC9D2AC22E2100EA2C12 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F434FC7C2AC21DE400EA2C12 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +210,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F434FC782AC21DE000EA2C12 /* ViewController.swift in Sources */,
+				F434FC992AC22C3800EA2C12 /* CreaeteReviewsVC.swift in Sources */,
+				F434FC8A2AC21E7D00EA2C12 /* Food.swift in Sources */,
+				F434FC782AC21DE000EA2C12 /* MainTableVC.swift in Sources */,
 				F434FC742AC21DE000EA2C12 /* AppDelegate.swift in Sources */,
+				F434FC902AC228D200EA2C12 /* CollectionViewCell.swift in Sources */,
+				F434FC8E2AC228A300EA2C12 /* MainCustomTVC.swift in Sources */,
+				F434FC9B2AC22DE000EA2C12 /* ReviewsVC.swift in Sources */,
+				F434FC972AC22B2600EA2C12 /* DetailVC.swift in Sources */,
+				F434FC952AC22A6E00EA2C12 /* DataM.swift in Sources */,
 				F434FC762AC21DE000EA2C12 /* SceneDelegate.swift in Sources */,
+				F434FC8C2AC2219500EA2C12 /* CustomTVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
