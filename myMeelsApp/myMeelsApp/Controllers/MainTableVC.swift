@@ -10,9 +10,49 @@ import UIKit
 final class MainTableVC: UITableViewController {
 
     var foodIndex = 0
-
-    override func viewDidLoad() { super.viewDidLoad() }
-
+    // For animation
+    private let imageView: UIImageView = {
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 150, height: 150))
+        imageView.contentMode = .scaleAspectFit
+        return imageView
+    }()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.addSubview(imageView)
+        loadImageAsync()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        imageView.center = view.center
+        DispatchQueue.main.asyncAfter(deadline:.now() + 0.5, execute: { self.animate() })
+    }
+    private func loadImageAsync() {
+        DispatchQueue.global().async {
+            if let image = UIImage(named: "logo") {
+                DispatchQueue.main.async {
+                    self.imageView.image = image
+                }
+            }
+        }
+    }
+    private func animate() {
+        UIView.animate(withDuration: 1, animations: {
+            let size = self.view.frame.size.width * 3
+            let diffX = size - self.view.frame.size.width
+            let diffY = self.view.frame.size.height - size
+            self.imageView.frame = CGRect(
+                x: -(diffX/2),
+                y: diffY/2,
+                width: size,
+                height: size
+            )
+        })
+        UIView.animate(withDuration: 1.5, animations: {
+            self.imageView.alpha = 0
+        })
+    }
     override func viewWillAppear(_ animated: Bool) { tableView.reloadData() }
 
     // MARK: - Table view data source
