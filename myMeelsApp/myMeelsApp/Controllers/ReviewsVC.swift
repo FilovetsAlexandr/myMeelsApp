@@ -27,7 +27,8 @@ final class ReviewsVC: UITableViewController {
         cell.dateLbl.text = reviews[indexPath.row].dateStr
         cell.ratingLbl.text = reviews[indexPath.row].rating
         cell.textLbl.text = reviews[indexPath.row].text
-        
+        cell.customImageView.image = reviews[indexPath.row].image
+
         return cell
     }
 

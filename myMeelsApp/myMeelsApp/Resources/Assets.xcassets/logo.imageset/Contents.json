@@ -1,16 +1,15 @@
 {
   "images" : [
     {
+      "filename" : "3558110_bread_fast_food_hamburger_patty_icon.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "photo@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "photo@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

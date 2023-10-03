@@ -21,6 +21,7 @@
 		F434FC972AC22B2600EA2C12 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F434FC962AC22B2600EA2C12 /* DetailVC.swift */; };
 		F434FC992AC22C3800EA2C12 /* CreaeteReviewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F434FC982AC22C3800EA2C12 /* CreaeteReviewsVC.swift */; };
 		F434FC9B2AC22DE000EA2C12 /* ReviewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F434FC9A2AC22DE000EA2C12 /* ReviewsVC.swift */; };
+		F43FC1DD2ACAE046002B39B3 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43FC1DC2ACAE046002B39B3 /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		F434FC962AC22B2600EA2C12 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		F434FC982AC22C3800EA2C12 /* CreaeteReviewsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreaeteReviewsVC.swift; sourceTree = "<group>"; };
 		F434FC9A2AC22DE000EA2C12 /* ReviewsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsVC.swift; sourceTree = "<group>"; };
+		F43FC1DC2ACAE046002B39B3 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				F434FC962AC22B2600EA2C12 /* DetailVC.swift */,
 				F434FC982AC22C3800EA2C12 /* CreaeteReviewsVC.swift */,
 				F434FC9A2AC22DE000EA2C12 /* ReviewsVC.swift */,
+				F43FC1DC2ACAE046002B39B3 /* ImagePicker.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 				F434FC9B2AC22DE000EA2C12 /* ReviewsVC.swift in Sources */,
 				F434FC972AC22B2600EA2C12 /* DetailVC.swift in Sources */,
 				F434FC952AC22A6E00EA2C12 /* DataM.swift in Sources */,
+				F43FC1DD2ACAE046002B39B3 /* ImagePicker.swift in Sources */,
 				F434FC762AC21DE000EA2C12 /* SceneDelegate.swift in Sources */,
 				F434FC8C2AC2219500EA2C12 /* CustomTVC.swift in Sources */,
 			);

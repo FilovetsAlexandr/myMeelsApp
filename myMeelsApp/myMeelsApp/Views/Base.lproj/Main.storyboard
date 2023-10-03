@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -229,14 +228,24 @@
                                                 </label>
                                             </subviews>
                                         </stackView>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ic3-4i-d3C">
+                                            <rect key="frame" x="243" y="0.0" width="150" height="150"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="150" id="Cxf-Tu-MfS"/>
+                                                <constraint firstAttribute="height" constant="150" id="qz8-Sn-qdN"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="o5l-fE-PVh" firstAttribute="leading" secondItem="gtz-oi-XK5" secondAttribute="leading" constant="8" id="LQG-B8-weu"/>
+                                        <constraint firstItem="Ic3-4i-d3C" firstAttribute="top" secondItem="gtz-oi-XK5" secondAttribute="top" id="T1a-kZ-H1O"/>
                                         <constraint firstAttribute="trailing" secondItem="o5l-fE-PVh" secondAttribute="trailing" constant="8" id="U7h-bH-FW2"/>
+                                        <constraint firstAttribute="trailing" secondItem="Ic3-4i-d3C" secondAttribute="trailing" id="aRi-d3-AD3"/>
                                         <constraint firstAttribute="bottom" secondItem="o5l-fE-PVh" secondAttribute="bottom" constant="8" id="xaX-1u-ABM"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="customImageView" destination="Ic3-4i-d3C" id="swg-KT-InP"/>
                                     <outlet property="dateLbl" destination="87r-ge-bwS" id="rzi-IA-YBp"/>
                                     <outlet property="ratingLbl" destination="ENB-2E-k5A" id="T09-TY-xoD"/>
                                     <outlet property="textLbl" destination="pUD-LT-VOV" id="r1C-vu-Iua"/>
@@ -262,8 +271,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="41" translatesAutoresizingMaskIntoConstraints="NO" id="yeV-Xk-HJZ">
-                                <rect key="frame" x="12" y="50" width="369" height="742"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="yeV-Xk-HJZ">
+                                <rect key="frame" x="12" y="25" width="369" height="777"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ваш Отзыв" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iyx-2f-JAE">
                                         <rect key="frame" x="0.0" y="0.0" width="369" height="37"/>
@@ -272,25 +281,22 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tSv-Cg-Gz2">
-                                        <rect key="frame" x="0.0" y="78" width="369" height="200"/>
+                                        <rect key="frame" x="0.0" y="57" width="369" height="200"/>
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="200" id="spl-PQ-GiA"/>
-                                        </constraints>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Отзыв должен быть более 5 символов" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iOp-W1-Qig">
-                                        <rect key="frame" x="0.0" y="298.66666666666669" width="369" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="267" width="369" height="0.0"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="4" translatesAutoresizingMaskIntoConstraints="NO" id="yz4-F1-uOz">
-                                        <rect key="frame" x="0.0" y="319" width="369" height="41"/>
+                                        <rect key="frame" x="0.0" y="277" width="369" height="26"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="Spf-uN-wmv"/>
+                                            <constraint firstAttribute="height" constant="25" id="ab0-4Z-ddS"/>
                                         </constraints>
                                         <segments>
                                             <segment title="⭐️"/>
@@ -303,52 +309,36 @@
                                             <action selector="starCntrl:" destination="XZG-3m-aRH" eventType="valueChanged" id="gN1-lL-q2C"/>
                                         </connections>
                                     </segmentedControl>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9eQ-kE-KLB">
-                                        <rect key="frame" x="0.0" y="400" width="369" height="153.33333333333337"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="sGw-iM-qSs">
-                                            <size key="itemSize" width="361" height="163"/>
-                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        </collectionViewFlowLayout>
-                                        <imageView key="backgroundView" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="photo" catalog="system" id="HRu-RP-wI4">
-                                            <rect key="frame" x="0.0" y="0.0" width="369" height="153.33333333333337"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="115" id="QyO-OW-Sz6"/>
-                                                <constraint firstAttribute="width" constant="115" id="Yyr-f3-5Th"/>
-                                            </constraints>
-                                        </imageView>
-                                        <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="cell" id="TGG-cY-2j1" customClass="CollectionViewCell" customModule="myMeelsApp" customModuleProvider="target">
-                                                <rect key="frame" x="4" y="0.0" width="361" height="163"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="NpX-KT-zlr">
-                                                    <rect key="frame" x="0.0" y="0.0" width="361" height="163"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="close" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M9c-KI-1iK">
-                                                            <rect key="frame" x="253" y="0.0" width="41" height="32"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <buttonConfiguration key="configuration" style="plain"/>
-                                                        </button>
-                                                    </subviews>
-                                                </collectionViewCellContentView>
-                                                <size key="customSize" width="361" height="163"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="oDK-5P-F4M">
+                                        <rect key="frame" x="0.0" y="322" width="369" height="54.333333333333314"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nMk-UM-ySH">
+                                                <rect key="frame" x="0.0" y="0.0" width="177" height="54.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="    Добавить изображение"/>
                                                 <connections>
-                                                    <outlet property="image" destination="HRu-RP-wI4" id="s1g-R4-Ks5"/>
+                                                    <action selector="pushSelectImage:" destination="XZG-3m-aRH" eventType="touchUpInside" id="RSM-wa-Mv7"/>
                                                 </connections>
-                                            </collectionViewCell>
-                                        </cells>
-                                        <connections>
-                                            <outlet property="dataSource" destination="XZG-3m-aRH" id="DGx-5n-bbP"/>
-                                            <outlet property="delegate" destination="XZG-3m-aRH" id="yE2-2c-ydg"/>
-                                        </connections>
-                                    </collectionView>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWp-mF-euH">
+                                                <rect key="frame" x="192" y="0.0" width="177" height="54.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="    Удалить изображение"/>
+                                                <connections>
+                                                    <action selector="deleteImage:" destination="XZG-3m-aRH" eventType="touchUpInside" id="RNO-vW-Ly1"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="dLT-jg-CXH">
+                                        <rect key="frame" x="0.0" y="398" width="369" height="147"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="0H3-zF-qen"/>
+                                            <constraint firstAttribute="width" constant="150" id="UrX-sd-SzS"/>
+                                        </constraints>
+                                    </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UwB-wd-cqd">
-                                        <rect key="frame" x="0.0" y="594.33333333333337" width="369" height="147.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="566.33333333333337" width="369" height="210.66666666666663"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Сохранить отзыв"/>
                                         <connections>
@@ -361,16 +351,16 @@
                         <viewLayoutGuide key="safeArea" id="9cL-Kq-BF2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="yeV-Xk-HJZ" firstAttribute="centerY" secondItem="9cL-Kq-BF2" secondAttribute="centerY" id="LO2-NO-Utv"/>
-                            <constraint firstAttribute="trailing" secondItem="yeV-Xk-HJZ" secondAttribute="trailing" constant="12" id="LQK-TB-vJV"/>
-                            <constraint firstItem="yeV-Xk-HJZ" firstAttribute="leading" secondItem="9cL-Kq-BF2" secondAttribute="leading" constant="12" id="cqo-eP-lck"/>
-                            <constraint firstItem="yeV-Xk-HJZ" firstAttribute="top" secondItem="9cL-Kq-BF2" secondAttribute="top" constant="50" id="kik-gl-G6F"/>
-                            <constraint firstItem="yeV-Xk-HJZ" firstAttribute="centerX" secondItem="9cL-Kq-BF2" secondAttribute="centerX" id="shz-oC-pMW"/>
+                            <constraint firstItem="9cL-Kq-BF2" firstAttribute="bottom" secondItem="yeV-Xk-HJZ" secondAttribute="bottom" constant="40" id="Zqr-c4-iEJ"/>
+                            <constraint firstItem="yeV-Xk-HJZ" firstAttribute="leading" secondItem="9cL-Kq-BF2" secondAttribute="leading" constant="12" id="afc-Nu-PtP"/>
+                            <constraint firstAttribute="trailing" secondItem="yeV-Xk-HJZ" secondAttribute="trailing" constant="12" id="fkd-5C-1jk"/>
+                            <constraint firstItem="yeV-Xk-HJZ" firstAttribute="top" secondItem="9cL-Kq-BF2" secondAttribute="top" constant="25" id="uTN-BY-ARW"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="button" destination="UwB-wd-cqd" id="NLh-ph-aXy"/>
-                        <outlet property="imageView" destination="HRu-RP-wI4" id="jQ2-xn-VJ9"/>
+                        <outlet property="deleteImageBtn" destination="mWp-mF-euH" id="9bE-Hg-HSA"/>
+                        <outlet property="imageView" destination="dLT-jg-CXH" id="h8q-em-iga"/>
                         <outlet property="starControl" destination="yz4-F1-uOz" id="Pr8-iX-B61"/>
                         <outlet property="text" destination="tSv-Cg-Gz2" id="1rF-G7-Qf5"/>
                         <outlet property="warningLbl" destination="iOp-W1-Qig" id="l0U-lj-g9X"/>
@@ -382,7 +372,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="photo" catalog="system" width="128" height="93"/>
+        <image name="photo.fill" catalog="system" width="128" height="93"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
